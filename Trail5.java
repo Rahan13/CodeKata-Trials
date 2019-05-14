@@ -9,7 +9,7 @@ public class Trial5{
     }
     static void compute(){
         if(a%4==0)
-        System.out.println("Leap Year");
+        System.out.println("Yes");
         else
         System.out.println("No");
     }
