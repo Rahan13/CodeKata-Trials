@@ -9,9 +9,9 @@ public class Trial5{
     }
     static void compute(){
         if(a%4==0)
-        System.out.println("Yes");
+        System.out.println("yes");
         else
-        System.out.println("No");
+        System.out.println("no");
     }
      public static void main(String []args){
         getData();
