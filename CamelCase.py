@@ -1,0 +1,6 @@
+a= input().split()
+b = list(a[0].lower())
+c = list(a[1].lower())
+b[0] = b[0].upper()
+c[0] = c[0].upper()
+print("".join(b)+" "+"".join(c))
