@@ -5,7 +5,6 @@ for i in range(1,a+1):
         count += 1
     if(count>2):
         break
-print(count)
 if(count==2):
     print("yes")
 else:
