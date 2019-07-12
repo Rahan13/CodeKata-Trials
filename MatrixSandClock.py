@@ -1,20 +1,23 @@
-def selectClock(r,c):
+def selectClock(r,c,k):
     l=list()
-    for i in range(c,c+3):
+    for i in range(c,c+k):
         l.append(mat[r][i])
-    l.append(mat[r+1][c+1])
-    r=r+2
-    for i in range(c,c+3):
+    l.append(mat[r+int(k/2)][c+int(k/2)])
+    r=r+(k-1)
+    for i in range(c,c+k):
         l.append(mat[r][i])
     return (sum(l),l)
 
 def process():
-    for i in range(0,row-2):
-        for j in range(0,column-2):
-            s,l=selectClock(i,j)
-            d.update({s:l})
+    if row%2 !=0 and row>=3:
+        k=row
+    while(k>=3):
+        for i in range(0,row-k+1):
+            for j in range(0,column-k+1):
+                s,l=selectClock(i,j,k)
+                d.update({s:l})
+        k=k-2
     if len(d.keys())!=0:
-        sorted(d.keys())
         l1=d.keys()
         print(max(l1),d[max(l1)])
     else:
